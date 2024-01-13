@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var linkCart = document.createElement("link");
   linkCart.rel = "stylesheet";
   linkCart.type = "text/css";
-  linkCart.href = "https://nicopicotto.github.io/donaclick-public/contador.css";
+  linkCart.href =
+    "https://nicopicotto.github.io/donaclick-public/dona-cart.css";
 
   // Insertar el elemento link en el head de la página
   document.getElementsByTagName("head")[0].appendChild(linkCart);
