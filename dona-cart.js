@@ -91,7 +91,7 @@ function addDonaClickSection() {
       },
       "Manos Por Patas": {
         message: "¡Felicidades! Estás colaborando con",
-        itemCost: 400,
+        itemCost: 750,
         itemName: "días de comida para mascotas 🐶 ¡Firulais te lo agradece!",
       },
     };
