@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var link = document.createElement("link");
+  /* var link = document.createElement("link");
   link.rel = "stylesheet";
   link.type = "text/css";
   link.href = "https://nicopicotto.github.io/donaclick-public/contador.css";
@@ -69,5 +69,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
       console.log("contador");
-    });
+    });*/
 });
