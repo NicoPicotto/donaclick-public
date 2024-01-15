@@ -54,20 +54,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const logoDiv = document.getElementById("logo");
   logoDiv.innerHTML += htmlContador;
-  fetch(
-    "https://script.google.com/macros/s/AKfycbwnAtMwYh6vgn0x1S8FY3LdrxQdNV6uZkj9hoxR4hqjKGvcPIkQs6ls7VDRkQ3APySoQA/exec",
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      const cards = document.querySelectorAll(".ong-card");
-      cards.forEach((card) => {
-        const ongName = card.querySelector("h3").textContent;
-        const numberElement = card.querySelector(".number");
-        const donationCount = data[ongName];
-        if (donationCount) {
-          numberElement.textContent = donationCount;
-        }
-      });
-      console.log("contador");
+
+  // Función para actualizar los números en las tarjetas
+  function actualizarContador(data) {
+    const cards = document.querySelectorAll(".ong-card");
+    cards.forEach((card) => {
+      const ongName = card.querySelector("h3").textContent;
+      const numberElement = card.querySelector(".number");
+      const donationCount = data[ongName];
+      if (donationCount) {
+        numberElement.textContent = donationCount;
+      }
     });
+  }
+
+  // Verifica si los datos ya están en localStorage
+  const storedData = localStorage.getItem("contadorONG");
+  if (storedData) {
+    actualizarContador(JSON.parse(storedData));
+    console.log("traido del local");
+  } else {
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwnAtMwYh6vgn0x1S8FY3LdrxQdNV6uZkj9hoxR4hqjKGvcPIkQs6ls7VDRkQ3APySoQA/exec",
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem("contadorONG", JSON.stringify(data));
+        actualizarContador(data);
+      });
+    console.log("traido del fetch");
+  }
 });
