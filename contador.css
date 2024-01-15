@@ -51,6 +51,7 @@
   font-size: 8px;
   line-height: 1.2;
 }
+/*
 .section {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -72,9 +73,7 @@
   text-decoration: none;
   margin-top: 20px;
 }
-.button:hover {
-  color: white;
-}
+*/
 .ong-title {
   font-size: 20px;
   font-weight: bold;
