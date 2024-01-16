@@ -68,20 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Verifica si los datos ya están en localStorage
-  const storedData = localStorage.getItem("contadorONG");
+  // Verifica si los datos ya están en sessionStorage
+  const storedData = sessionStorage.getItem("contadorONG");
   if (storedData) {
     actualizarContador(JSON.parse(storedData));
-    console.log("traido del local");
+    console.log("traido del session");
   } else {
     fetch(
       "https://script.google.com/macros/s/AKfycbwnAtMwYh6vgn0x1S8FY3LdrxQdNV6uZkj9hoxR4hqjKGvcPIkQs6ls7VDRkQ3APySoQA/exec",
     )
       .then((response) => response.json())
       .then((data) => {
-        localStorage.setItem("contadorONG", JSON.stringify(data));
+        sessionStorage.setItem("contadorONG", JSON.stringify(data));
         actualizarContador(data);
+        console.log("traido del fetch");
       });
-    console.log("traido del fetch");
   }
 });
