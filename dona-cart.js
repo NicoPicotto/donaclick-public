@@ -70,7 +70,7 @@ function addDonaClickSection() {
       "Haciendo Camino": {
         message: "¡Felicidades! Estás colaborando con",
         itemCost: 750,
-        itemName: "pote(s) de leche 🥛 Los chicos te lo agradecen 💛",
+        itemName: "vaso(s) de leche 🥛 Los chicos te lo agradecen 💛",
       },
       "Rotary Club Río Cuarto": {
         message: "¡Felicidades! Estás colaborando con",

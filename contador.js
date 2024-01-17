@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h2 class="number">&nbsp;</h2>
             <h2>🥛</h2>
         </div>
-        <p>Potes de leche</p>
+        <p>Vasos de leche</p>
         <h3>Haciendo Camino</h3>
      </div>
     <div class="ong-card">
