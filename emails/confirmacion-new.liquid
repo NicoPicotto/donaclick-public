@@ -1,0 +1,43 @@
+Estás recibiendo este e-mail porque comenzaste una compra en {{store_name}}.
+
+{% if order.requires_shipping %}Te enviaremos tu pedido una vez que{% else %}Podrás retirar el pedido cuando{% endif %} recibamos la confirmación de la venta por parte del medio de pago. La confirmación puede demorar hasta 72hs hábiles (esto puede variar dependiendo del medio de pago elegido. La validación del pago con tarjeta de crédito suele ser instantánea). No te preocupes que también vas a recibir un mensaje informando la acreditación del pago. 
+
+Número de orden: #{{order.id}}
+
+Tu pedido incluye:
+
+{% for product in order.products %}{{ product.quantity }} x {{product.name ~ product.variationName}} por {{ product.priceFormat }} cada uno.
+{% endfor %}
+
+Si te sumaste a nuestro programa <strong>DonáClick</strong>, queremos agradecerte y contarte que pronto recibirás un comprobante de la transferencia realizada por tu donación.
+Si no seleccionaste una ONG y deseas hacerlo, <strong>aún estás a tiempo de marcar una diferencia</strong>. Por favor, contactanos a través de nuestro [WhatsApp](https://api.whatsapp.com/send/?phone=5493585163816&text&type=phone_number&app_absent=0) para elegir la ONG de tu preferencia. Tu participación es valiosa y juntos podemos hacer un impacto positivo.
+<strong>Te recordamos que esto no tiene ningún costo extra.</strong>
+
+Descubrí más sobre cómo tu compra puede impactar positivamente con DonáClick. <a href="https://todoairelibre.com.ar/donaclick/">Hacé clic aquí para saber más.</a>
+
+{% for promotion in order.promotional_discount.promotions_applied %}
+    {% if promotion.discount_script_type == "NAtX%off" %}{{ promotion.selected_threshold.discount_decimal_percentage * 100 }}% OFF{% else %}Promoción {{ promotion.discount_script_type }}{% endif %} {% if promotion.scope_value_name %}en {{ promotion.scope_value_name }}{% endif %} {% if promotion.discount_script_type == "NAtX%off" %}comprando {{ promotion.selected_threshold.quantity }} o más un.{% endif %}: -{{promotion.total_discount_amount_short}}
+{% endfor %}  
+
+{% if order.requires_shipping %}
+Costos de envío: {% if order.show_shipping_price %}{% if order.shipping == 0 %}Gratis{% else %}{{order.shippingFormat}}{% endif %}{% else %}A convenir{% endif %}
+{% endif %}
+
+{% if order.discountCoupon > 0 %}
+Descuento ({{order.coupon}}): {{order.discountCouponFormat}}
+{% endif %}
+{% if order.discountGateway > 0 %}
+Descuento por {{order.paymentMethod}}: {{order.discountGatewayFormat}}
+{% endif %}
+
+Total: {{order.totalFormat}}
+
+{% if order.statusPageUrl %}
+Conocé el estado de tu pedido y seguilo desde este link:
+{{ order.statusPageUrl }}
+{% endif %}
+
+Si no realizaste esta compra o simplemente estabas probando nuestro sitio, por favor desconsiderá este e-mail.
+
+Atentamente,
+El el equipo de {{store_name}}
