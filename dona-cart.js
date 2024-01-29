@@ -10,6 +10,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addDonaClickSection();
 
+  //Capturar nombres de los elementos
+  function getProductNames() {
+    var productElements = document.querySelectorAll(
+      '[data-component="name.short-name"]',
+    );
+    var productNames = Array.from(productElements).map(function (element) {
+      return element.textContent.trim();
+    });
+    return productNames.join(", ");
+  }
+
+  var productNames = getProductNames();
+  formData.append("productos", productNames);
+  //Hasta acá lo nuevo
+
   var addToCartButton = document.querySelector(".js-addtocart");
 
   if (addToCartButton) {
