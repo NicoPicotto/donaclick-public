@@ -44,7 +44,7 @@ function addDonaClickSection() {
                             <option value="Rotary Club Río Cuarto">Rotary Club Río Cuarto 📚</option>
                             <option value="Fundación Donde Quiero Estar">Fundación Donde Quiero Estar 🏥</option>
                             <option value="Juntando Sonrisas">Juntando Sonrisas 🍲</option>
-							<option value="Manos Por Patas">Manos Por Patas 🐶</option>
+							<option value="ManosporPatas">Manos Por Patas 🐶</option>
                         </select>
                     </div>
                     <button id="save-info" disabled>¡Sumate!</button>
