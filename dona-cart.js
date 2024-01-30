@@ -168,9 +168,6 @@ function addDonaClickSection() {
     saveInfoButton.addEventListener("click", function (event) {
       event.preventDefault();
 
-      var productNames = getProductNames();
-      formData.append("productos", productNames);
-
       var subtotalString = cartSubtotalElement.textContent;
       var subtotal = parseFloat(
         subtotalString.replace("$", "").replace(/\./g, ""),
@@ -191,6 +188,8 @@ function addDonaClickSection() {
         formData.append("mail", userEmail);
         formData.append("ong", selectedValue);
         formData.append("monto", formattedSubtotal);
+        var productNames = getProductNames();
+        formData.append("productos", productNames);
 
         // Enviar los datos a Google Apps Script
         fetch(
