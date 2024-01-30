@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addDonaClickSection();
 
-  var productNames = getProductNames();
-  formData.append("productos", productNames);
-  //Hasta acá lo nuevo
-
   var addToCartButton = document.querySelector(".js-addtocart");
 
   if (addToCartButton) {
@@ -26,18 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function addDonaClickSection() {
-  //Capturar nombres de los elementos
-  function getProductNames(formData) {
-    var productElements = document.querySelectorAll(
-      '[data-component="name.short-name"]',
-    );
-    var productNames = Array.from(productElements).map(function (element) {
-      return element.textContent.trim();
-    });
-    formData.append("productos", productNames.join(", "));
-  }
-
-  console.log("DonáClick Run");
+  console.log("DonáClick Run 29");
   var cartRow = document.querySelector(".cart-row");
   if (cartRow && !document.querySelector(".select-ong-section")) {
     // Estructura HTML base de la nueva sección en el cart
@@ -190,7 +175,17 @@ function addDonaClickSection() {
         formData.append("mail", userEmail);
         formData.append("ong", selectedValue);
         formData.append("monto", formattedSubtotal);
-        getProductNames(formData);
+
+        //nuevo
+        var productElements = document.querySelectorAll(
+          '[data-component="name.short-name"]',
+        );
+        var productNames = Array.from(productElements)
+          .map(function (element) {
+            return element.textContent.trim();
+          })
+          .join(", ");
+        formData.append("productos", productNames);
 
         // Enviar los datos a Google Apps Script
         fetch(
