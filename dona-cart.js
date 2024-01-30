@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function addDonaClickSection() {
-  console.log("DonáClick Run 29");
+  console.log("DonáClick Run 30");
   var cartRow = document.querySelector(".cart-row");
   if (cartRow && !document.querySelector(".select-ong-section")) {
     // Estructura HTML base de la nueva sección en el cart
@@ -189,7 +189,7 @@ function addDonaClickSection() {
 
         // Enviar los datos a Google Apps Script
         fetch(
-          "https://script.google.com/macros/s/AKfycbyVLV6UHA3tkcOYOlTYfg7es-ZJMmCGW4R9tyoXexYdZlN0BDGYnx6Q1RL7yWVccyJB/exec",
+          "https://script.google.com/macros/s/AKfycbxIyXgIvonuPRhEMZZdO3xhiTVqBrx05RoJitb2yb7ySfeZCYO70ypL9Ts4sBKWrvZT/exec",
           {
             method: "POST",
             body: formData,
