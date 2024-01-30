@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return productNames.join(", ");
   }
 
-  var productNames = getProductNames();
-  formData.append("productos", productNames);
   //Hasta acá lo nuevo
 
   var addToCartButton = document.querySelector(".js-addtocart");
@@ -169,6 +167,9 @@ function addDonaClickSection() {
     // Evento para el botón de "Guardar información"
     saveInfoButton.addEventListener("click", function (event) {
       event.preventDefault();
+
+      var productNames = getProductNames();
+      formData.append("productos", productNames);
 
       var subtotalString = cartSubtotalElement.textContent;
       var subtotal = parseFloat(
