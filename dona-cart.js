@@ -44,10 +44,8 @@ function addDonaClickSection() {
                             <option value="Rotary Club Río Cuarto">Rotary Club Río Cuarto 📚</option>
                             <option value="Fundación Donde Quiero Estar">Fundación Donde Quiero Estar 🏥</option>
                             <option value="Juntando Sonrisas">Juntando Sonrisas 🍲</option>
-                           
-							<option value="ManosporPatas">Manos Por Patas 🐶</option>
-              <option value="TodaUnaVida">Toda Una Vida 👩‍🏫
-              </option>
+							              <option value="ManosporPatas">Manos Por Patas 🐶</option>
+                            <option value="VolandoAlto">VolandoAlto 👩‍🏫</option>
                         </select>
                     </div>
                     <button id="save-info" disabled>¡Sumate!</button>
@@ -97,7 +95,7 @@ function addDonaClickSection() {
         itemCost: 750,
         itemName: "días de comida para mascotas 🐶 ¡Firulais te lo agradece!",
       },
-      "Toda Una Vida": {
+      VolandoAlto: {
         message: "¡Felicidades! Estás colaborando con",
         itemCost: 2000,
         itemName: "hora/s de alfabetización 📚 Los chicos te lo agradecen 💛",
