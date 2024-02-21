@@ -46,6 +46,7 @@ function addDonaClickSection() {
                             <option value="Juntando Sonrisas">Juntando Sonrisas 🍲</option>
 							              <option value="ManosporPatas">Manos Por Patas 🐶</option>
                             <option value="VolandoAlto">VolandoAlto 👩‍🏫</option>
+                            <option value="Fundacion Soles">Fundación Soles 👪</option>
                         </select>
                     </div>
                     <button id="save-info" disabled>¡Sumate!</button>
@@ -90,7 +91,7 @@ function addDonaClickSection() {
         itemCost: 1000,
         itemName: "platos de comida 🍲 Los chicos te lo agradecen 💛",
       },
-      "Manos Por Patas": {
+      ManosporPatas: {
         message: "¡Felicidades! Estás colaborando con",
         itemCost: 750,
         itemName: "días de comida para mascotas 🐶 ¡Firulais te lo agradece!",
@@ -99,6 +100,12 @@ function addDonaClickSection() {
         message: "¡Felicidades! Estás colaborando con",
         itemCost: 2000,
         itemName: "hora/s de alfabetización 📚 Los chicos te lo agradecen 💛",
+      },
+      "Fundacion Soles": {
+        message: "¡Felicidades! Estás colaborando con",
+        itemCost: 3500,
+        itemName:
+          "cena/s para niños en tratamiento ambulatorio y sus familias 👪",
       },
     };
 
