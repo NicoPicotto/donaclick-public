@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function () {
   var link = document.createElement("link");
   link.rel = "stylesheet";
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Insertar el elemento link en el head de la página
   document.getElementsByTagName("head")[0].appendChild(link);
 
-  /*
+
   const htmlContador = `
   <div class="ong-container">
     <div class="ong-card" data-ong="Haciendo Caminos">
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  */
+  
 
   // Verifica si los datos ya están en sessionStorage
   const storedData = sessionStorage.getItem("contadorONG");
@@ -87,3 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
+*/
