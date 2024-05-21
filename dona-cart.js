@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("hola desde codesandbox");
   var linkCart = document.createElement("link");
   linkCart.rel = "stylesheet";
   linkCart.type = "text/css";
