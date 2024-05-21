@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("hola desde codesandbox");
   var linkCart = document.createElement("link");
   linkCart.rel = "stylesheet";
   linkCart.type = "text/css";
@@ -59,8 +58,17 @@ function addDonaClickSection() {
       ".js-visible-on-cart-filled",
     );
 
-    // Añadir la nueva sección al elemento cart-row
-    cartRow.innerHTML += newSectionHTML;
+    // Crear un contenedor temporal para convertir el HTML en un elemento DOM
+    var tempContainer = document.createElement("div");
+    tempContainer.innerHTML = newSectionHTML;
+    var newSectionElement = tempContainer.firstElementChild;
+
+    // Insertar la nueva sección como segundo hijo de cartRow
+    if (cartRow.children.length > 1) {
+      cartRow.insertBefore(newSectionElement, cartRow.children[1]);
+    } else {
+      cartRow.appendChild(newSectionElement);
+    }
 
     // Seleccionar elementos del DOM
     var selectONG = document.getElementById("select-ong");
