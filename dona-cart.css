@@ -2,6 +2,210 @@
   background-color: #34495e;
   color: white;
 }
+
+.select-ong-section {
+  background-color: #2e3192;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-family: "Arial", sans-serif;
+  max-width: 500px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-image: url("https://i.postimg.cc/9fszRQ4r/dona-bg.png");
+  background-size: cover; /* Ajusta el tamaño de la imagen */
+  background-position: top; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.select-ong-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.select-ong-header img {
+  height: 2.5em;
+  padding-top: 20px;
+}
+
+.select-ong_text {
+  max-width: 15ch;
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: "GothamRounded";
+}
+
+.select-ong_subtitle {
+  font-family: "GothamRounded";
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.select-ong_subtitle .span-bg {
+  background-color: #ff7e00;
+  padding-inline: 2px;
+  padding-top: 2px;
+  border-radius: 6px;
+}
+
+.select-ong_subtitle .span-bold {
+  font-weight: 800;
+}
+
+.select-ong_subtitle .span-bold-underline {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #ff7e00;
+  text-underline-offset: 3px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.select-ong_label {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-style: normal;
+  font-family: "GothamRounded";
+  display: none;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-ong-section select {
+  padding: 0.6em;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.select-ong-section input {
+  padding: 0.6em;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: black;
+}
+
+#save-info {
+  padding: 0.6em;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #ff7e00;
+  color: white;
+  font-family: "GothamRounded";
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#save-info:hover {
+  background-color: #e07000;
+}
+
+#save-info:disabled {
+  background-color: #ff8000a7;
+  cursor: not-allowed;
+}
+
+.impact-message-container {
+  font-family: "GothamRounded";
+}
+
+.impact-message {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.impact-message img {
+  background-color: #ff7e00;
+  padding: 10px;
+  border-radius: 100%;
+  color: white;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .select-ong-section {
+     padding-inline: 15px;
+  }
+
+  .select-ong-header {
+     flex-direction: column-reverse;
+  }
+
+  .impact-message {
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 5px;
+  }
+
+  .select-ong-header img{
+   object-fit: cover;
+   height: auto;
+   width: 50%;
+   
+  }
+
+  .select-ong_text {
+     font-size: 16px;
+  }
+
+  .select-ong_text span {
+     font-size: 14px;
+  }
+}
+
+.loaderDona {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+     transform: rotate(0deg);
+  }
+  100% {
+     transform: rotate(360deg);
+  }
+}
+
+
+/* .dona-btn-back {
+  background-color: #34495e;
+  color: white;
+}
 .select-ong-section {
   background-color: #e43a47;
   padding: 20px;
@@ -48,10 +252,10 @@
 }
 
 .select-ong_label {
-  font-weight: bold; /* Hacerla más destacada */
+  font-weight: bold;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  font-style: normal; /* Quitar cursiva */
+  font-style: normal;
 }
 
 .input-wrapper {
@@ -111,7 +315,8 @@
   background-color: #a8dadbbc;
 }
 
-/* Media queries para responsividad */
+
+
 @media (max-width: 768px) {
   .select-ong-section {
     padding-inline: 15px;
@@ -142,4 +347,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
+} */
