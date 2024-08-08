@@ -239,29 +239,19 @@ function addDonaClickSection() {
         formData.forEach((value, key) => {
           formDataEntries[key] = value;
         });
-        console.log("FormData entries: ", JSON.stringify(formDataEntries));
 
         fetch(
           "https://script.google.com/macros/s/AKfycbxIyXgIvonuPRhEMZZdO3xhiTVqBrx05RoJitb2yb7ySfeZCYO70ypL9Ts4sBKWrvZT/exec",
           {
             method: "POST",
             body: formData,
-            mode: "cors",
-            redirect: "follow", // Configurado para seguir redirecciones
-            headers: {
-              Accept: "application/json",
-            },
+            mode: "no-cors",
           }
         )
           .then(function (response) {
-            if (response.ok) {
-              return response.text(); // Usar text() en lugar de json() si el servidor no devuelve JSON
-            } else {
-              throw new Error("Network response was not ok.");
-            }
-          })
-          .then(function (data) {
-            console.log("Respuesta del servidor:", data);
+            console.log("Datos enviados con éxito");
+            console.log("formData: ", formData);
+
             var checkoutButton = document.querySelector(
               'input[name="go_to_checkout"]'
             );
