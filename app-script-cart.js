@@ -7,5 +7,7 @@ function doPost(e) {
   var newRow = [mail, ong, new Date(), monto];
   sheet.appendRow(newRow);
 
+  console.log("Corri otro script");
+
   return ContentService.createTextOutput("Datos añadidos con éxito");
 }

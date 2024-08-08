@@ -235,9 +235,11 @@ function addDonaClickSection() {
           .join(", ");
         formData.append("productos", productNames);
 
-        for (var pair of formData.entries()) {
-          console.log(pair[0] + ": " + pair[1]);
-        }
+        var formDataEntries = {};
+        formData.forEach((value, key) => {
+          formDataEntries[key] = value;
+        });
+        console.log("FormData entries: ", JSON.stringify(formDataEntries));
 
         fetch(
           "https://script.google.com/macros/s/AKfycbxIyXgIvonuPRhEMZZdO3xhiTVqBrx05RoJitb2yb7ySfeZCYO70ypL9Ts4sBKWrvZT/exec",
