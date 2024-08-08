@@ -246,13 +246,22 @@ function addDonaClickSection() {
           {
             method: "POST",
             body: formData,
-            mode: "cors", // Cambiado a "cors"
+            mode: "cors",
+            redirect: "follow", // Configurado para seguir redirecciones
+            headers: {
+              Accept: "application/json",
+            },
           }
         )
           .then(function (response) {
-            console.log("Datos enviados con éxito");
-            console.log("formData: ", formData);
-
+            if (response.ok) {
+              return response.text(); // Usar text() en lugar de json() si el servidor no devuelve JSON
+            } else {
+              throw new Error("Network response was not ok.");
+            }
+          })
+          .then(function (data) {
+            console.log("Respuesta del servidor:", data);
             var checkoutButton = document.querySelector(
               'input[name="go_to_checkout"]'
             );
