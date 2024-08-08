@@ -76,7 +76,7 @@ function addDonaClickSection() {
               `;
 
     var visibleCartFilled = document.querySelector(
-      ".js-visible-on-cart-filled",
+      ".js-visible-on-cart-filled"
     );
 
     var tempContainer = document.createElement("div");
@@ -152,7 +152,7 @@ function addDonaClickSection() {
       if (cartSubtotalElement) {
         var subtotalString = cartSubtotalElement.textContent;
         var subtotal = parseFloat(
-          subtotalString.replace("$", "").replace(/\./g, "").replace(",", "."),
+          subtotalString.replace("$", "").replace(/\./g, "").replace(",", ".")
         );
         var donationAmount = subtotal * 0.03;
 
@@ -161,7 +161,7 @@ function addDonaClickSection() {
 
         var itemCount = Math.max(
           1,
-          Math.round(donationAmount / ongAction.itemCost),
+          Math.round(donationAmount / ongAction.itemCost)
         );
 
         var impactMessageHTML = `
@@ -175,7 +175,7 @@ function addDonaClickSection() {
         }
 
         var impactMessageContainer = document.querySelector(
-          ".impact-message-container",
+          ".impact-message-container"
         );
         if (impactMessageContainer) {
           impactMessageContainer.innerHTML = impactMessageHTML;
@@ -204,13 +204,17 @@ function addDonaClickSection() {
 
       var subtotalString = cartSubtotalElement.textContent;
       var subtotal = parseFloat(
-        subtotalString.replace("$", "").replace(/\./g, ""),
+        subtotalString.replace("$", "").replace(/\./g, "")
       );
 
       var formattedSubtotal = subtotal.toString().replace(".", ",");
 
       var selectedValue = selectONG.value;
       var userEmail = userEmailInput.value;
+
+      console.log("Selected ONG: ", selectedValue);
+      console.log("User Email: ", userEmail);
+      console.log("Subtotal: ", formattedSubtotal);
 
       if (selectedValue && userEmail && subtotal !== undefined) {
         saveInfoButton.innerHTML = '<div class="loaderDona"></div>';
@@ -222,7 +226,7 @@ function addDonaClickSection() {
         formData.append("monto", formattedSubtotal);
 
         var productElements = document.querySelectorAll(
-          '[data-component="name.short-name"]',
+          '[data-component="name.short-name"]'
         );
         var productNames = Array.from(productElements)
           .map(function (element) {
@@ -231,20 +235,24 @@ function addDonaClickSection() {
           .join(", ");
         formData.append("productos", productNames);
 
+        for (var pair of formData.entries()) {
+          console.log(pair[0] + ": " + pair[1]);
+        }
+
         fetch(
           "https://script.google.com/macros/s/AKfycbxIyXgIvonuPRhEMZZdO3xhiTVqBrx05RoJitb2yb7ySfeZCYO70ypL9Ts4sBKWrvZT/exec",
           {
             method: "POST",
             body: formData,
             mode: "no-cors",
-          },
+          }
         )
           .then(function (response) {
             console.log("Datos enviados con éxito");
             console.log("formData: ", formData);
 
             var checkoutButton = document.querySelector(
-              'input[name="go_to_checkout"]',
+              'input[name="go_to_checkout"]'
             );
             checkoutButton.click();
           })
@@ -253,7 +261,7 @@ function addDonaClickSection() {
           });
       } else {
         alert(
-          "Por favor, introduce tu correo electrónico y selecciona una ONG antes de guardar la información.",
+          "Por favor, introduce tu correo electrónico y selecciona una ONG antes de guardar la información."
         );
       }
     });
