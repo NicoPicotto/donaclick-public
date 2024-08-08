@@ -246,7 +246,7 @@ function addDonaClickSection() {
           {
             method: "POST",
             body: formData,
-            mode: "no-cors",
+            mode: "cors", // Cambiado a "cors"
           }
         )
           .then(function (response) {
