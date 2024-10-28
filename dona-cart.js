@@ -67,7 +67,7 @@ function addDonaClickSection() {
                               <option value="VolandoAlto">VolandoAlto 👩‍🏫</option>
                               <option value="Fundacion Soles">Fundación Soles 👪</option>
                               <option value="Banco de Alimentos">Banco de Alimentos BA 🍲</option>
-                              <option value="Zoomar">Zoomar 👷🏼‍♀️</option>
+                              <option value="Vamos a Zoomar">Vamos a Zoomar 👷🏼‍♀️</option>
                               
                           </select>
                       </div>
@@ -147,10 +147,11 @@ function addDonaClickSection() {
         itemName: "platos de comida. ¡Los chicos te lo agradecen!",
         icon: `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAblJREFUaEPtWFGWwyAIlJttT7a7J2tv5sa3Nk8J6qjBaF/yWVAZZqAomcU/Wjx+cwO4mkGYAWutDYMlomhtr701ETeAd+ZWYOBpjPkKqH4Q0SsA0GUfIaEfY8x3cNCLiB4BgC77CAAu+y7L4fe71bIL3Fhru+zqAHyQXCbu511KW6PiLFTZW0DAXShVrFtdcClF7bbWXguiBYAklZCFLrs6gISU9lo4w14DopqBRMFyGXEWquzqADyIKUaLJgZuAP//G1kGURk1M4AeoO33eQD8SOBmnnBw004ksr8bHF273gdIt+jAgLVWGheQA0b4RO04BYCPAiMCg8/gN8GPZGB5CUkjMUyxsmM0c6VqQJomleOCt18bAC9gkYHMzQtOk5LjIfs5ADPKCAcgTZtKWYW3leSTZMADmKkbidnPApipFlLZRwDMUAvRCyDXXHGcTrz1wNrtdExK571vEcCF9VAMviihMHuDmYCCrwIwkAk4+GoAHoRWYYs3rlINQTUgbcJfFUoHley5VplbewMoZRa1X8HAmTe3w2UdBo46cr8Tn1+airfqj6wV5Ih1zUU8IjjkjBsAkiVNnz+sfjRAiGsVigAAAABJRU5ErkJggg=="/>`,
       },
-      Zoomar: {
+      "Vamos a Zoomar": {
         message: "¡Felicidades! Estás ayudando a capacitar",
         itemCost: 5000,
-        itemName: "mujer/es para conseguir empleo en la construcción. ¡Ella y su familia te lo agradece!",
+        itemName:
+          "mujer/es para conseguir empleo en la construcción. ¡Ella y su familia te lo agradece!",
         icon: `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAd1JREFUaEPtWFtywyAMlE7W9mRNTtb0ZGrkAQ/FWEiWjJsOfHkSBLtavWyEF1/44vhhErhawanAVMDpgRlCpQOJ6B0APtNv/HznZ0S8OR29a+5WoAF677IHAHwDwAMR+TlkHSJgAC2BDFFHTSAIdDghkcAA0O5w2xC4EPQhdVoEKCS7TjoEnyWtPPpfEuD6Xdbzk3xpPpZL770uwb0kzg0oNyfzrQEGTeD5XEsZHUlGBC3mgMZjRMRk3lKoaUy0e9TAzQq0EKSSG5EvZuAhBKpB7kiIHQauJkBEXzyEWSbKFGJ8Ryv5VaBzQ0XEDyn+uklMTzTFActEeYAM5wuvTRmswdX5VTeuer+VwGqfD2ZPecfjYnzhfPq1RhDICvF4bJr1JeBrjFejwxkKtGYnkYylDI9UYC/XFjLpT07qTZiISXqRAtrG1d33FxTogrxEgVQSb1WZdYFtGUcowI3MFLeBLLhviJ9kNH2AwTOJ4avnfQbUJcCbUr0eTaLrfTWB7PpUv89+uVHNSmujs8ZF4Ajdupo7uTi8mTuxRNDSUYVzTB4PJVAeVozQ/PPe21ruyMs30iWGnd9JVUlsDbOR+yeBkd5uduqrAXjvnyHk9aDXfirg9aDXfirg9aDX/gf8lt0xri4oaAAAAABJRU5ErkJggg=="/>`,
       },
     };
