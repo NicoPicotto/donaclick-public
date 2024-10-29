@@ -61,7 +61,7 @@ function addDonaClickSection() {
                               <option value="" disabled selected>Elegí tu causa</option>
                               <option value="Haciendo Camino">Haciendo Camino 🥛</option>
                               <option value="Rotary Club Río Cuarto">Rotary Club Río Cuarto 📚</option>
-                              <option value="Fundación Donde Quiero Estar">Fundación Donde Quiero Estar 🏥</option>
+                              <option value="Donde Quiero Estar">Donde Quiero Estar 🏥</option>
                               <option value="Juntando Sonrisas">Juntando Sonrisas 🍲</option>
                               <option value="ManosporPatas">Manos Por Patas 🐶</option>
                               <option value="VolandoAlto">VolandoAlto 👩‍🏫</option>
@@ -109,7 +109,7 @@ function addDonaClickSection() {
           "kit(s) de útiles para estudiantes. ¡Las mentes curiosas valoran esto!",
         icon: `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAR9JREFUaEPtmVEOAiEMRNuT6Z5MPZl7s2qT9YcIFJZKicOPH3ZxZl7ZRMq0+OLF9RMMzCZoIiAiVyK6EZF+/nI9mPle+sGqARF5ThCeat6Yef9mpGggiHjVvTPz1mRARBSdtk2Ixe9e+jsDEiL6Q0QPARgYSdCNQG7jVvHyfmsU3/cdh9jUQjBwxA4Caf/VEmnt8bP1bof4rDDr8zBgTcqrDgS8krXuCwLWpLzqQMArWeu+IGBNyqsOBLySte4LAtakvOpAwCtZ674gYE3Kq24EgepdvZf44n1R7sv0T/2o+5/RJrPzgXQ2sLwBIlquhXQepuOlEKv5EKvqQCMm6jUQhkKXgU/vHPOyy8xp5SkDIQ5BRkR1ThxZvGqDgdmEXlbctTE0wEhuAAAAAElFTkSuQmCC"/>`,
       },
-      "Fundación Donde Quiero Estar": {
+      "Donde Quiero Estar": {
         message: "¡Felicidades! Estás colaborando con",
         itemCost: 4000,
         itemName:
