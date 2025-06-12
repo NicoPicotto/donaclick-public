@@ -55,7 +55,7 @@ function addDonaClickSection() {
                       <p class="select-ong_subtitle">El <span class="span-bg">3%</span> del valor de tu carrito <span class="span-bold">será donado a la ONG</span> que vos elijas <span class="span-bold-underline">sin costo extra</span>.</p>
                       <div class="input-wrapper">     
                           <label class="select-ong_label" for="user-email">Tu correo electrónico</label>
-                          <input type="email" id="user-email" placeholder="Ingresá tu email" required>
+                          <input type="email" id="user-email" placeholder="Ingresá tu email">
                           <label class="select-ong_label" for="select-ong">Eegí tu causa</label>
                           <select id="select-ong">
                               <option value="" disabled selected>Elegí tu causa</option>
@@ -72,6 +72,7 @@ function addDonaClickSection() {
                           </select>
                       </div>
                       <button id="save-info" disabled>Confirmar Selección</button>
+                      <button id="skip-donation">Continuar sin participar</button>
                       <div class="impact-message-container"></div>
                   </div>
               `;
@@ -297,6 +298,16 @@ function addDonaClickSection() {
       ) {
         selectONG.value = storedOng;
       }
+    }
+    // Skip donation button handler
+    var skipDonationButton = document.getElementById("skip-donation");
+    if (skipDonationButton) {
+      skipDonationButton.addEventListener("click", function () {
+        var checkoutButton = document.querySelector(
+          'input[name="go_to_checkout"]'
+        );
+        if (checkoutButton) checkoutButton.click();
+      });
     }
   } else {
     console.log("Elemento .cart-row no encontrado");

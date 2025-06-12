@@ -125,6 +125,28 @@
   background-color: #e07000;
 }
 
+#skip-donation {
+  padding: 0.6em;
+  margin-top: 0.6em;
+  font-size: 1em;
+  border: 1px solid #ff7e00;
+  border-radius: 4px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  font-family: "GothamRounded";
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#skip-donation:hover {
+  background-color: #e07000;
+}
+
 #save-info:disabled {
   background-color: #ff8000a7;
   cursor: not-allowed;
@@ -152,34 +174,33 @@
 /* Media queries para responsividad */
 @media (max-width: 768px) {
   .select-ong-section {
-     padding-inline: 15px;
+    padding-inline: 15px;
   }
 
   .select-ong-header {
-     flex-direction: column-reverse;
-     gap: 20px;
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 
   .impact-message {
-     flex-direction: column;
-     align-items: flex-start;
-     gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  .select-ong-header img{
-   object-fit: cover;
-   height: auto;
-   width: 50%;
-   
+  .select-ong-header img {
+    object-fit: cover;
+    height: auto;
+    width: 50%;
   }
 
   .select-ong_text {
-     font-size: 20px;
-     max-width: inherit;
+    font-size: 20px;
+    max-width: inherit;
   }
 
   .select-ong_text span {
-     font-size: 14px;
+    font-size: 14px;
   }
 }
 
@@ -194,13 +215,12 @@
 
 @keyframes spin {
   0% {
-     transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-     transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 
 /* .dona-btn-back {
   background-color: #34495e;
