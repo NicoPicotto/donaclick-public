@@ -72,7 +72,6 @@ function addDonaClickSection() {
                           </select>
                       </div>
                       <button id="save-info" disabled>Confirmar Selección</button>
-                      <button id="skip-donation">Continuar sin participar</button>
                       <div class="impact-message-container"></div>
                   </div>
               `;
